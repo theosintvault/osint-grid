@@ -1,0 +1,19 @@
+name: Dataset Diff
+
+on:
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  diff:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Show diff for sources.json
+        run: |
+          echo "### Dataset Changes" >> $GITHUB_STEP_SUMMARY
+          git diff origin/main -- data/sources.json >> $GITHUB_STEP_SUMMARY
