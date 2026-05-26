@@ -1,0 +1,44 @@
+name: Bug Report
+description: Report a broken link, incorrect category, or dataset issue
+title: "[BUG] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What is the issue?
+      placeholder: Clear and concise description of the problem.
+    validations:
+      required: true
+
+  - type: input
+    id: source_name
+    attributes:
+      label: Source Name
+      placeholder: e.g., New Jersey Business Search
+
+  - type: input
+    id: source_url
+    attributes:
+      label: Source URL
+      placeholder: https://example.gov
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Corporate
+        - Property
+        - Court
+        - Licensing
+        - Government
+        - Public Database
+        - International
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      placeholder: 1. Go to...\n2. Click...\n3. See error...
