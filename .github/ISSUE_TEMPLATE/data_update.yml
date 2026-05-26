@@ -1,0 +1,49 @@
+name: Data Update Request
+description: Request adding, updating, or removing a public records source
+title: "[DATA] "
+labels: ["data"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Source Name
+      placeholder: e.g., Florida Property Records
+    validations:
+      required: true
+
+  - type: input
+    id: url
+    attributes:
+      label: Source URL
+      placeholder: https://example.gov
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Corporate
+        - Property
+        - Court
+        - Licensing
+        - Government
+        - Public Database
+        - International
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description of Change
+      placeholder: What needs to be added, updated, or removed?
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional Notes
+      placeholder: Optional context or references.
