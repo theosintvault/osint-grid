@@ -1,0 +1,22 @@
+name: Lint
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate JSON
+        run: |
+          find . -name "*.json" -print0 | xargs -0 -I {} jq empty {}
+
+      - name: Validate YAML
+        run: |
+          find . -name "*.yml" -o -name "*.yaml" -print0 | xargs -0 -I {} yamllint {}
