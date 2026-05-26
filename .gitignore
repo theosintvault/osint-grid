@@ -1,0 +1,19 @@
+# OSINT Grid Gitignore
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Python cache (future CLI/API integration)
+__pycache__/
+*.pyc
+
+# Node modules (future UI tooling)
+node_modules/
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.local
