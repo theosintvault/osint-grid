@@ -1,0 +1,24 @@
+name: Publish Dataset
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Prepare dataset export
+        run: |
+          mkdir -p dist
+          cp data/sources.json dist/sources.json
+
+      - name: Upload release artifact
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/sources.json
