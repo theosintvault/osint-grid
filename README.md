@@ -1,74 +1,48 @@
 # The OSINT Grid  
 A Comprehensive Index of 4,500+ Verified Public Records Sources
 
-The OSINT Grid is a research‑grade directory of public records sources used by investigators, analysts, journalists, compliance teams, and digital risk professionals. Developed and maintained by **The OSINT Vault**, the Grid centralizes high‑value data sources across corporate registries, property records, court systems, licensing databases, and government portals in the United States and internationally.
-
-This repository serves as the authoritative reference for the structure, metadata, and evolution of the OSINT Grid. It is designed for developers, researchers, and organizations integrating the Grid into investigative workflows, enrichment pipelines, or analytical tooling.
-
----
+The OSINT Grid is a research‑grade directory of public records sources used by investigators, analysts, journalists, compliance teams, and digital risk professionals. Developed and maintained by The OSINT Vault, the Grid centralizes high‑value data sources across corporate registries, property records, court systems, licensing databases, and government portals.
 
 ## Purpose
-
-Public records are abundant, but fragmented, inconsistent, and difficult to validate.  
-The OSINT Grid consolidates thousands of verified sources into a single, structured index built for:
-
-- Digital investigations  
-- Corporate due diligence  
-- Fraud and risk assessments  
-- Background research  
-- Asset tracing  
-- Regulatory and compliance workflows  
-- Journalistic research  
-- Intelligence analysis  
-
-Every entry is vetted, categorized, and structured to support practical investigative use, emphasizing accuracy, transparency, and source reliability.
-
----
+The OSINT Grid consolidates thousands of verified public records sources into a single, structured index built for investigations, due diligence, fraud analysis, background research, asset tracing, compliance workflows, journalism, and intelligence analysis.
 
 ## Key Features
+- 4,500+ verified public records sources  
+- Structured categorization for fast filtering  
+- Corporate, property, court, licensing, and government records  
+- Metadata‑rich entries for automation and enrichment  
+- Continuously updated and maintained  
 
-- **4,500+ verified public records sources** across federal, state, county, and municipal levels
-- 
----
+## Repository Structure
+/data — dataset of verified public records sources  
+/metadata — machine‑readable metadata  
+/docs — technical and investigative documentation  
 
 ## Live Tool
-
-The interactive version of the OSINT Grid is available at:
-
-**https://theosintvault.io/osint-grid**
-
----
+https://theosintvault.io/osint-grid
 
 ## Use Cases
-
-### Investigative & Intelligence Work  
-Identify authoritative sources for corporate ownership, property holdings, litigation history, licensing status, and more.
-
-### Compliance & Risk  
-Support KYC, AML, vendor vetting, and regulatory due diligence with verified public records.
-
-### Journalism & Research  
-Trace assets, verify identities, and uncover public information across jurisdictions.
-
-### Technical Integration  
-Integrate the dataset into internal tools, dashboards, or automated workflows using the structured JSON format.
-
----
+- Corporate ownership and business records  
+- Property and land research  
+- Court and litigation lookup  
+- Licensing and permit verification  
+- Compliance, KYC, AML  
+- Investigative journalism  
+- OSINT automation and tooling  
 
 ## Roadmap
-
-- API endpoints for programmatic access  
-- Automated source validation and uptime monitoring  
+- API access  
+- Automated source validation  
 - Expanded international coverage  
-- Category‑level analytics and source scoring  
-- CLI integration for investigators using The OSINT Vault toolkit  
-
----
+- Category‑level analytics  
+- CLI integration  
 
 ## Maintainer
+The OSINT Vault — high‑integrity OSINT tooling and digital intelligence infrastructure.
 
-**The OSINT Vault**  
-Focused on high‑integrity OSINT tooling, investigative workflows, and digital intelligence infrastructure.
+## Contact
+theosintvault@gmail.com
+
 
 ---
 
