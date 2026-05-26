@@ -1,0 +1,19 @@
+name: Generate Release Notes
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  release-notes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate release notes
+        id: notes
+        uses: actions/generate-release-notes@v2
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          body: ${{ steps.notes.outputs.notes }}
