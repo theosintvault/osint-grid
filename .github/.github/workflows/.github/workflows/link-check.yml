@@ -1,0 +1,19 @@
+name: Link Checker
+
+on:
+  schedule:
+    - cron: "0 3 * * *"   # Runs nightly at 3 AM UTC
+  workflow_dispatch:
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install link checker
+        run: npm install -g broken-link-checker
+
+      - name: Run link checker on sources.json
+        run: blc --input data/sources.json --recursive --verbose
