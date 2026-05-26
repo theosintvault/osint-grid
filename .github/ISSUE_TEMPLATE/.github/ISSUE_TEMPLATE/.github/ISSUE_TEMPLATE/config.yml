@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: OSINT Grid Documentation
+    url: https://theosintvault.io/osint-grid
+    about: Read the official documentation for The OSINT Grid.
+  - name: General Support
+    url: https://github.com/theosintvault/osint-grid/issues
+    about: For general questions or discussions.
