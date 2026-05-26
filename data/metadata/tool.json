@@ -1,0 +1,9 @@
+{
+  "name": "The OSINT Grid",
+  "slug": "osint-grid",
+  "type": "web-tool",
+  "url": "https://theosintvault.io/osint-grid",
+  "description": "A curated index of 4,500+ verified public records sources used in investigative, compliance, and intelligence workflows.",
+  "version": "1.0.0",
+  "maintainer": "The OSINT Vault"
+}
