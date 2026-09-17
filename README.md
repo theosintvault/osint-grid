@@ -1,52 +1,58 @@
-# The OSINT Grid  
-A Comprehensive Index of 4,500+ Verified Public Records Sources
+# The OSINT Grid
 
-The OSINT Grid is a research‑grade directory of public records sources used by investigators, analysts, journalists, compliance teams, and digital risk professionals. Developed and maintained by The OSINT Vault, the Grid centralizes high‑value data sources across corporate registries, property records, court systems, licensing databases, and government portals.
+A curated index of 4,500+ verified public-records sources for investigators, analysts, journalists, compliance teams, researchers, and OSINT practitioners.
 
-## Purpose
-The OSINT Grid consolidates thousands of verified public records sources into a single, structured index built for investigations, due diligence, fraud analysis, background research, asset tracing, compliance workflows, journalism, and intelligence analysis.
+The OSINT Grid organizes public-records sources into a structured, searchable catalog designed for due diligence, fraud investigations, asset tracing, licensing review, background research, and investigative workflows.
 
-## Key Features
-- 4,500+ verified public records sources  
-- Structured categorization for fast filtering  
-- Corporate, property, court, licensing, and government records  
-- Metadata‑rich entries for automation and enrichment  
-- Continuously updated and maintained  
+## Why this project exists
 
-## Repository Structure
-/data — dataset of verified public records sources  
-/metadata — machine‑readable metadata  
-/docs — technical and investigative documentation  
+Public-records research often requires stitching together fragmented sources across governments, courts, registries, corporations, and local agencies. This project consolidates those sources into a maintained index to reduce search time, improve coverage, and support repeatable investigative workflows.
 
-## Live Tool
+## Repository structure
+
+- `data/` — source catalog and schema
+- `docs/` — project documentation and overview
+- `README.md` — project landing page
+- `CHANGELOG.md` — release history
+- `TOOLKIT.md` — relationship to The OSINT Vault Toolkit
+- `llms.txt` — concise LLM-readable project summary
+- `llms-full.txt` — extended LLM context for tooling and agents
+
+## Categories
+
+- Corporate and business registries
+- Property and land records
+- Court and case lookup systems
+- Licensing and permits
+- Government directories
+- Public databases
+- International records
+
+## Use cases
+
+- Corporate ownership and business-record research
+- Property and land research
+- Court and litigation lookup
+- Licensing and permit verification
+- Compliance, KYC, and AML workflows
+- Investigative journalism
+- OSINT automation and tooling
+- Due diligence, fraud analysis, and asset tracing
+
+## Live tool
+
 https://theosintvault.io/osint-grid
 
-## Use Cases
-- Corporate ownership and business records  
-- Property and land research  
-- Court and litigation lookup  
-- Licensing and permit verification  
-- Compliance, KYC, AML  
-- Investigative journalism  
-- OSINT automation and tooling  
+## Project notes
 
-## Roadmap
-- API access  
-- Automated source validation  
-- Expanded international coverage  
-- Category‑level analytics  
-- CLI integration  
+This repository is a structured index and documentation resource. It is intended to support lawful, ethical research and verification. Public availability does not remove legal, contractual, privacy, or access restrictions associated with a source.
+
+Source availability, coverage, access requirements, and terms may change. Verify information before operational use.
 
 ## Maintainer
-The OSINT Vault — high‑integrity OSINT tooling and digital intelligence infrastructure.
+
+The OSINT Vault
 
 ## Contact
+
 theosintvault@gmail.com
-
-
----
-
-## Contact
-
-For enterprise licensing, integrations, or partnership inquiries:  
-**theosintvault@gmail.com*

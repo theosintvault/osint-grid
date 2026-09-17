@@ -1,14 +1,41 @@
 {
-  "title": "OSINT Grid Source Schema",
-  "type": "object",
-  "properties": {
-    "id": { "type": "string", "description": "Unique identifier for the source" },
-    "name": { "type": "string", "description": "Official name of the public records source" },
-    "url": { "type": "string", "description": "Direct link to the source" },
-    "category": { "type": "string", "description": "Type of record (corporate, property, court, licensing, etc.)" },
-    "jurisdiction": { "type": "string", "description": "Geographic or governmental scope of the source" },
-    "description": { "type": "string", "description": "Short explanation of what the source provides" },
-    "status": { "type": "string", "enum": ["active", "deprecated"], "description": "Operational status of the source" }
-  },
-  "required": ["id", "name", "url", "category", "jurisdiction", "status"]
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OSINT Grid Source Catalog",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier for the source"
+      },
+      "name": {
+        "type": "string",
+        "description": "Official name of the public-records source"
+      },
+      "url": {
+        "type": "string",
+        "description": "Direct link to the source"
+      },
+      "category": {
+        "type": "string",
+        "description": "Type of record such as corporate, property, court, licensing, or government"
+      },
+      "jurisdiction": {
+        "type": "string",
+        "description": "Geographic or governmental scope of the source"
+      },
+      "description": {
+        "type": "string",
+        "description": "Short description of what the source provides"
+      },
+      "status": {
+        "type": "string",
+        "enum": ["active", "deprecated"],
+        "description": "Operational status of the source"
+      }
+    },
+    "required": ["id", "name", "url", "category", "jurisdiction", "status"],
+    "additionalProperties": true
+  }
 }

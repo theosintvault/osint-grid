@@ -1,11 +1,29 @@
 [
   {
-    "id": "",
-    "name": "",
-    "url": "",
-    "category": "",
-    "jurisdiction": "",
-    "description": "",
+    "id": "us-business-search",
+    "name": "U.S. Secretary of State Business Search",
+    "url": "https://example.gov/business-search",
+    "category": "corporate",
+    "jurisdiction": "United States",
+    "description": "Business entity and registration lookup database.",
+    "status": "active"
+  },
+  {
+    "id": "us-county-property-records",
+    "name": "County Property Records Portal",
+    "url": "https://examplecounty.gov/property",
+    "category": "property",
+    "jurisdiction": "United States",
+    "description": "Property ownership, parcel, and land records portal.",
+    "status": "active"
+  },
+  {
+    "id": "us-court-docket-search",
+    "name": "State Court Docket Search",
+    "url": "https://examplecourts.gov/dockets",
+    "category": "court",
+    "jurisdiction": "United States",
+    "description": "Court docket lookup and case metadata search.",
     "status": "active"
   }
 ]
