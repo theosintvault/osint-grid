@@ -1,0 +1,5 @@
+name: Config
+about: Prevent blank issue creation and point users to supported templates
+files:
+  - bug_report.md
+  - feature_request.md

@@ -10,15 +10,18 @@ Public-records research often requires stitching together fragmented sources acr
 
 ## Repository structure
 
-- `data/` — source catalog and schema
-- `docs/` — project documentation and overview
+- `data/` — machine-readable source catalog and JSON schema
+- `docs/` — project documentation and overview material
 - `README.md` — project landing page
 - `CHANGELOG.md` — release history
-- `TOOLKIT.md` — relationship to The OSINT Vault Toolkit
+- `TOOLKIT.md` — relationship to The OSINT Vault toolkit
 - `llms.txt` — concise LLM-readable project summary
-- `llms-full.txt` — extended LLM context for tooling and agents
+- `llms-full.txt` — extended context for LLMs and agents
+- `CONTRIBUTING.md` — contribution guidance and workflow
+- `SECURITY.md` — vulnerability disclosure process
+- `CODE_OF_CONDUCT.md` — community expectations
 
-## Categories
+## Source categories
 
 - Corporate and business registries
 - Property and land records
@@ -39,6 +42,26 @@ Public-records research often requires stitching together fragmented sources acr
 - OSINT automation and tooling
 - Due diligence, fraud analysis, and asset tracing
 
+## Data model
+
+Each source record follows a consistent schema designed for validation and downstream tooling integration.
+
+Example:
+
+```json
+{
+  "id": "us-business-search",
+  "name": "U.S. Secretary of State Business Search",
+  "url": "https://example.gov/business-search",
+  "category": "corporate",
+  "jurisdiction": "United States",
+  "description": "Business entity and registration lookup database.",
+  "status": "active"
+}
+```
+
+The data files live in `data/` and can be validated with `data/sources.schema.json`.
+
 ## Live tool
 
 https://theosintvault.io/osint-grid
@@ -48,6 +71,14 @@ https://theosintvault.io/osint-grid
 This repository is a structured index and documentation resource. It is intended to support lawful, ethical research and verification. Public availability does not remove legal, contractual, privacy, or access restrictions associated with a source.
 
 Source availability, coverage, access requirements, and terms may change. Verify information before operational use.
+
+## Contributing
+
+Contributions are welcome, especially in data quality, schema improvements, documentation, and validation workflows. Please review `CONTRIBUTING.md` before submitting updates.
+
+## Security
+
+If you discover a security issue or a valid concern with the project, please review `SECURITY.md` and follow the reporting guidance.
 
 ## Maintainer
 
