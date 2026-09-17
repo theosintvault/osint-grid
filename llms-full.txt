@@ -1,0 +1,145 @@
+# The OSINT Grid — Full LLM Context
+
+## Identity
+
+The OSINT Grid is an open GitHub repository maintained by The OSINT Vault. Its stated purpose is to document and version a structured index of more than 4,500 verified public-records sources for investigators, analysts, journalists, compliance teams, researchers, and digital-risk professionals.
+
+Repository: `theosintvault/osint-grid`
+Primary branch: `main`
+License: MIT
+Live tool: https://theosintvault.io/osint-grid
+Toolkit repository: https://github.com/theosintvault/the-osint-vault-toolkit
+Maintainer contact: theosintvault@gmail.com
+
+## Project purpose
+
+The project consolidates public-records entry points into a structured, machine-readable index. It is intended to support lawful research, investigative pivoting, due diligence, fraud analysis, asset tracing, KYC/AML workflows, regulatory research, investigative journalism, and OSINT tooling.
+
+The repository is not itself a guarantee that every linked source is available, current, complete, free, or legally accessible in every jurisdiction. Users and applications should verify source availability, accuracy, access requirements, rate limits, licensing, privacy obligations, and applicable law before use.
+
+## Repository map
+
+### `README.md`
+The main project landing page. It describes the OSINT Grid, its intended users, key features, use cases, roadmap, live tool, maintainer, and contact information.
+
+### `data/sources.json`
+The machine-readable source dataset. Each record is expected to represent a public-records source or source entry.
+
+At the time this context file was prepared, the committed file contains a placeholder record with empty values and `status: "active"`. Do not infer that the full 4,500+ source catalog is present in this revision merely from the project description. Applications should inspect and validate the actual file contents at runtime.
+
+### `data/sources.schema.json`
+The JSON schema describing source records. The schema currently defines these properties:
+
+- `id` — required string; unique identifier for the source.
+- `name` — required string; official name of the source.
+- `url` — required string; direct link to the source.
+- `category` — required string; type of record, such as corporate, property, court, or licensing.
+- `jurisdiction` — required string; geographic or governmental scope.
+- `description` — optional string; short explanation of the source.
+- `status` — required string; either `active` or `deprecated`.
+
+The schema declares an object shape, while `data/sources.json` currently contains an array of records. Consumers should confirm whether the schema is intended to validate individual records or the complete array and should not assume array-level validation until the schema is updated accordingly.
+
+### `docs/overview.md`
+Provides the project overview, source categories, documentation purpose, and planned additions including API endpoints, automated source validation, uptime monitoring, international coverage, and CLI integration.
+
+### `TOOLKIT.md`
+Explains that the OSINT Grid is part of The OSINT Vault investigative ecosystem and links to the main toolkit repository.
+
+### `CHANGELOG.md`
+Project change history.
+
+### `contributing.md`
+Contribution guidance. The filename is lowercase in the current repository; tools should not assume the conventional uppercase spelling `CONTRIBUTING.md`.
+
+### `SECURITY.md`
+Security reporting guidance.
+
+### `SUPPORT.md`
+Support information.
+
+### `CODE_OF_CONDUCT.md`
+Community participation standards.
+
+## Source model
+
+A conceptual source record looks like this:
+
+```json
+{
+  "id": "unique-source-id",
+  "name": "Official source name",
+  "url": "https://example.gov/records",
+  "category": "court",
+  "jurisdiction": "United States",
+  "description": "Short description of the records or search capability.",
+  "status": "active"
+}
+```
+
+The repository schema permits `active` and `deprecated` values for `status`. A source marked active should still be independently checked because operational status can change after a commit.
+
+## Categories and use cases
+
+The documented categories include:
+
+- Corporate and business registries
+- Property and land records
+- Court and case lookup systems
+- Licensing and permits
+- Government directories
+- Public databases
+- International records
+
+Documented use cases include:
+
+- Corporate ownership and business-record research
+- Property and land research
+- Court and litigation lookup
+- Licensing and permit verification
+- Compliance, KYC, and AML workflows
+- Investigative journalism
+- OSINT automation and tooling
+- Due diligence, fraud analysis, and asset tracing
+
+## Planned development
+
+The project documentation identifies these future directions:
+
+- Programmatic API access
+- Automated source validation
+- Uptime monitoring
+- Expanded international coverage
+- Category-level analytics
+- CLI integration
+
+These are roadmap items, not necessarily implemented features. Do not claim that an API, automated validation service, uptime monitor, analytics layer, or CLI integration is currently available unless the repository contains supporting implementation or documentation.
+
+## Guidance for language models and automated agents
+
+When answering questions about this repository:
+
+1. Use the committed files as the source of truth for the current revision.
+2. Distinguish the project’s stated 4,500+ source scope from the contents of the currently checked-in dataset.
+3. Do not invent source records, jurisdictions, validation results, APIs, integrations, or availability claims.
+4. Link users to the relevant repository file when describing schema, data, contribution, security, or project scope.
+5. Treat external public-records sources as potentially changeable and recommend verification before operational use.
+6. Describe the project as a directory or index, not as authorization to access restricted systems.
+7. Encourage lawful, ethical, and proportionate use, including respect for privacy, terms of service, access controls, and applicable regulations.
+8. Avoid exposing or aggregating sensitive personal information beyond what is necessary for a legitimate, lawful purpose.
+
+## Safety and responsible use
+
+The OSINT Grid should be used for legitimate research and verification. It must not be used to bypass authentication, evade access controls, stalk or harass individuals, facilitate doxxing, enable identity theft, or obtain restricted information. Public availability does not automatically remove legal, ethical, contractual, or privacy constraints.
+
+## Navigation
+
+- Repository: https://github.com/theosintvault/osint-grid
+- README: https://github.com/theosintvault/osint-grid/blob/main/README.md
+- Dataset: https://github.com/theosintvault/osint-grid/blob/main/data/sources.json
+- Schema: https://github.com/theosintvault/osint-grid/blob/main/data/sources.schema.json
+- Overview: https://github.com/theosintvault/osint-grid/blob/main/docs/overview.md
+- Toolkit integration: https://github.com/theosintvault/osint-grid/blob/main/TOOLKIT.md
+- Live tool: https://theosintvault.io/osint-grid
+
+_Last reviewed: September 17, 2026._
