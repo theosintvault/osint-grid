@@ -1,12 +1,16 @@
-# Changelog — The OSINT Grid
+# Changelog
 
-All notable changes to this project will be documented in this file.
+## [0.1.0] - 2026-09-17
 
-## 1.0.0 — Initial Release
-- Repository initialized with core structure
-- Added README.md
-- Added data/sources.json (dataset placeholder)
-- Added data/sources.schema.json (dataset schema)
-- Added metadata/tool.json (tool metadata)
-- Added docs/overview.md (documentation)
-- Added TOOLKIT.md (cross‑repository reference)
+### Added
+
+- Public project landing page
+- Source catalog and JSON schema
+- Data contribution documentation
+- Project documentation index
+- LLM-readable project summaries
+- Contribution guide
+- Security and community guidance
+- Bug report and feature request templates
+- Pull request template
+- Initial release documentation
