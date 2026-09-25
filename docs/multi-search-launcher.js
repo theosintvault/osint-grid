@@ -42,6 +42,10 @@ function createState() {
   };
 }
 
+function isRecord(value) {
+  return Boolean(value) && typeof value === "object" && !Array.isArray(value);
+}
+
 function renderSources(state, nodes) {
   const { sourceList, sourceSearch } = nodes;
   sourceList.innerHTML = "";
@@ -79,6 +83,8 @@ function renderSources(state, nodes) {
 }
 
 function renderCategories(state, categoryList) {
+  categoryList.innerHTML = "";
+
   for (const category of uniqueSorted(state.allSources.map((s) => s.category))) {
     const option = createCheckbox(category, category, () => {
       if (state.selectedCategories.has(category)) {
@@ -87,6 +93,10 @@ function renderCategories(state, categoryList) {
         state.selectedCategories.add(category);
       }
     });
+
+    if (state.selectedCategories.has(category)) {
+      option.querySelector("input").checked = true;
+    }
 
     categoryList.appendChild(option);
   }
@@ -120,7 +130,7 @@ function renderResult(items, output) {
 }
 
 function launchLinks(items) {
-  for (const item of items) {
+  for (const item of items.slice(0, SEARCH_LIMIT)) {
     window.open(item.url, "_blank", "noopener,noreferrer");
   }
 }
@@ -129,6 +139,7 @@ async function main() {
   const state = createState();
 
   const nodes = {
+    launcherForm: document.getElementById("launcher-form"),
     categoryList: document.getElementById("category-list"),
     sourceList: document.getElementById("source-list"),
     sourceSearch: document.getElementById("source-search"),
@@ -145,7 +156,10 @@ async function main() {
       loadJson("../data/search-launcher.config.json")
     ]);
 
-    state.allSources = normalizeSources(sources, config.queryTemplates);
+    const queryTemplates = isRecord(config) && isRecord(config.queryTemplates)
+      ? config.queryTemplates
+      : {};
+    state.allSources = normalizeSources(sources, queryTemplates);
 
     renderCategories(state, nodes.categoryList);
     renderSources(state, nodes);
@@ -168,12 +182,16 @@ async function main() {
       }
     };
 
-    nodes.generateButton.addEventListener("click", () => run(false));
-    nodes.launchButton.addEventListener("click", () => run(true));
+    nodes.launcherForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const submitterId = event.submitter ? event.submitter.id : "";
+      run(submitterId === "launch-links");
+    });
 
     nodes.status.textContent = `Loaded ${state.allSources.length} active, launchable sources.`;
   } catch (error) {
-    nodes.status.textContent = `Launcher failed to initialize: ${error.message}`;
+    const message = error instanceof Error ? error.message : String(error);
+    nodes.status.textContent = `Launcher failed to initialize: ${message}`;
   }
 }
 

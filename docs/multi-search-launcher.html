@@ -46,28 +46,31 @@
         <code>/data/search-launcher.config.json</code>.
       </p>
 
-      <label for="search-term">Search term</label>
-      <input id="search-term" type="text" autocomplete="off" />
+      <form id="launcher-form">
+        <label for="search-term">Search term</label>
+        <input id="search-term" type="text" autocomplete="search" required />
 
-      <fieldset>
-        <legend>Categories</legend>
-        <div id="category-list" class="options" aria-label="Category selection"></div>
-      </fieldset>
+        <fieldset>
+          <legend>Categories</legend>
+          <div id="category-list" class="options" aria-label="Category selection"></div>
+        </fieldset>
 
-      <fieldset>
-        <legend>Sources</legend>
-        <label for="source-search">Filter source list</label>
-        <input id="source-search" type="search" autocomplete="off" />
-        <div id="source-list" class="options" aria-label="Source selection"></div>
-      </fieldset>
+        <fieldset>
+          <legend>Sources</legend>
+          <label for="source-search">Filter source list</label>
+          <input id="source-search" type="search" autocomplete="search" />
+          <div id="source-list" class="options" aria-label="Source selection"></div>
+        </fieldset>
 
-      <div class="actions">
-        <button id="generate-links" type="button">Generate links</button>
-        <button id="launch-links" type="button">Launch in new tabs</button>
-      </div>
+        <div class="actions">
+          <button id="generate-links" type="submit">Generate links</button>
+          <button id="launch-links" type="submit">Launch in new tabs</button>
+        </div>
+      </form>
 
       <p id="launcher-status" role="status" aria-live="polite">Loading…</p>
-      <section id="launch-output" aria-live="polite"></section>
+      <h2 id="launch-results-heading">Launch results</h2>
+      <section id="launch-output" aria-live="polite" aria-labelledby="launch-results-heading"></section>
     </main>
 
     <script type="module" src="./multi-search-launcher.js"></script>

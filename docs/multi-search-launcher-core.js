@@ -14,19 +14,41 @@ export function normalizeSources(sources, queryTemplates = {}) {
 
   return sources
     .filter((source) => source && source.status === "active")
+    .filter(
+      (source) =>
+        typeof source.id === "string" &&
+        typeof source.name === "string" &&
+        typeof source.category === "string" &&
+        typeof source.jurisdiction === "string"
+    )
     .filter((source) => isSafeHttpUrl(source.url))
-    .map((source) => ({
-      ...source,
-      queryTemplate:
-        typeof queryTemplates[source.id] === "string"
+    .map((source) => {
+      const template =
+        typeof queryTemplates[source.id] === "string" &&
+        queryTemplates[source.id].includes("{query}")
           ? queryTemplates[source.id]
-          : null
-    }))
+          : null;
+
+      return {
+        ...source,
+        queryTemplate: template
+      };
+    })
     .filter((source) => {
       if (!source.queryTemplate) {
         return true;
       }
-      return isSafeHttpUrl(source.queryTemplate.replace("{query}", "placeholder"));
+
+      const substituted = source.queryTemplate.replaceAll(
+        "{query}",
+        encodeURIComponent("placeholder")
+      );
+      if (!isSafeHttpUrl(substituted)) {
+        return false;
+      }
+
+      const parsed = new URL(substituted);
+      return parsed.search.includes("placeholder");
     });
 }
 
@@ -59,15 +81,10 @@ export function createLaunchItems({
 
   return sources
     .filter((source) => {
-      if (hasSourceSelection) {
-        return selectedSourceIds.has(source.id);
-      }
-
-      if (hasCategorySelection) {
-        return selectedCategories.has(source.category);
-      }
-
-      return true;
+      const matchesSource = !hasSourceSelection || selectedSourceIds.has(source.id);
+      const matchesCategory =
+        !hasCategorySelection || selectedCategories.has(source.category);
+      return matchesSource && matchesCategory;
     })
     .map((source) => ({
       source,

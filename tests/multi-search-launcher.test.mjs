@@ -41,11 +41,26 @@ test("normalizeSources excludes deprecated, malformed, and non-http sources", ()
         jurisdiction: "US",
         url: "not a url",
         status: "active"
+      },
+      {
+        id: "missing-fields",
+        name: "Missing fields",
+        url: "https://example.com",
+        status: "active"
+      },
+      {
+        id: "path-template",
+        name: "Path template",
+        category: "court",
+        jurisdiction: "US",
+        url: "https://example.com",
+        status: "active"
       }
     ],
     {
       valid: "https://example.com/search?q={query}",
-      "invalid-protocol": "javascript:alert(1)"
+      "invalid-protocol": "javascript:alert(1)",
+      "path-template": "https://example.com/{query}"
     }
   );
 
@@ -100,4 +115,49 @@ test("createLaunchItems falls back to source URL when no query template exists",
 
   assert.equal(item.url, "https://example.gov");
   assert.equal(item.querySupported, false);
+});
+
+test("normalizeSources ignores templates that do not contain {query}", () => {
+  const [source] = normalizeSources(
+    [
+      {
+        id: "missing-placeholder",
+        name: "Missing placeholder",
+        category: "court",
+        jurisdiction: "US",
+        url: "https://example.com",
+        status: "active"
+      }
+    ],
+    {
+      "missing-placeholder": "https://example.com/search"
+    }
+  );
+
+  assert.equal(source.queryTemplate, null);
+});
+
+test("createLaunchItems applies source and category filters together", () => {
+  const items = createLaunchItems({
+    sources: [
+      {
+        id: "in-category",
+        name: "In category",
+        category: "court",
+        url: "https://example.com"
+      },
+      {
+        id: "out-category",
+        name: "Out category",
+        category: "government",
+        url: "https://example.org"
+      }
+    ],
+    selectedCategories: new Set(["court"]),
+    selectedSourceIds: new Set(["in-category", "out-category"]),
+    searchTerm: "term"
+  });
+
+  assert.equal(items.length, 1);
+  assert.equal(items[0].source.id, "in-category");
 });

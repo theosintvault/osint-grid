@@ -40,5 +40,5 @@ Not every catalog source is assumed to support query parameters.
 3. Run launcher tests:
 
 ```bash
-node --test /home/runner/work/osint-grid/osint-grid/tests/multi-search-launcher.test.mjs
+node --test tests/multi-search-launcher.test.mjs
 ```
