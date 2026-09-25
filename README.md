@@ -18,6 +18,7 @@ The OSINT Grid brings public-records links into one organized catalog so researc
 
 - `data/` contains the source catalog and JSON schema
 - `docs/` contains project documentation
+- `docs/multi-search-launcher.html` provides a multi-search launcher for opening selected source links
 - `llms.txt` provides a concise machine-readable project summary
 - `llms-full.txt` provides extended project context
 - `TOOLKIT.md` documents the connection to The OSINT Vault Toolkit

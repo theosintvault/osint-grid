@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OSINT Grid Multi-Search Launcher</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        margin: 2rem;
+        line-height: 1.5;
+      }
+
+      fieldset {
+        margin: 1rem 0;
+      }
+
+      .options {
+        display: grid;
+        gap: 0.25rem;
+        max-height: 16rem;
+        overflow: auto;
+        border: 1px solid #d1d5db;
+        border-radius: 0.5rem;
+        padding: 0.75rem;
+      }
+
+      .option-item {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+      }
+
+      .actions {
+        display: flex;
+        gap: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>OSINT Grid Multi-Search Launcher</h1>
+      <p>
+        Enter a search term, then choose categories and/or sources. The launcher uses
+        <code>/data/sources.json</code> and optional query templates from
+        <code>/data/search-launcher.config.json</code>.
+      </p>
+
+      <label for="search-term">Search term</label>
+      <input id="search-term" type="text" autocomplete="off" />
+
+      <fieldset>
+        <legend>Categories</legend>
+        <div id="category-list" class="options" aria-label="Category selection"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Sources</legend>
+        <label for="source-search">Filter source list</label>
+        <input id="source-search" type="search" autocomplete="off" />
+        <div id="source-list" class="options" aria-label="Source selection"></div>
+      </fieldset>
+
+      <div class="actions">
+        <button id="generate-links" type="button">Generate links</button>
+        <button id="launch-links" type="button">Launch in new tabs</button>
+      </div>
+
+      <p id="launcher-status" role="status" aria-live="polite">Loading…</p>
+      <section id="launch-output" aria-live="polite"></section>
+    </main>
+
+    <script type="module" src="./multi-search-launcher.js"></script>
+  </body>
+</html>

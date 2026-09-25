@@ -1,0 +1,5 @@
+{
+  "queryTemplates": {
+    "us-business-search": "https://example.gov/business-search?q={query}"
+  }
+}

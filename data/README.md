@@ -6,6 +6,7 @@ This directory contains the machine-readable source catalog used by The OSINT Gr
 
 - `sources.json` — the source index
 - `sources.schema.json` — schema used to validate records
+- `search-launcher.config.json` — optional query templates for the multi-search launcher
 
 ## Source record format
 

@@ -5,6 +5,7 @@ This directory contains project-level documentation for the OSINT Grid.
 ## Files
 
 - `overview.md` — mission, categories, purpose, and roadmap
+- `multi-search-launcher.md` — usage and participation guidance for the multi-search launcher
 
 ## Overview
 
