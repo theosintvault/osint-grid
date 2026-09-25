@@ -1,29 +1,218 @@
 [
   {
-    "id": "us-business-search",
-    "name": "U.S. Secretary of State Business Search",
-    "url": "https://example.gov/business-search",
+    "id": "us-sec-edgar-company-filings",
+    "name": "SEC EDGAR Company Filings Search",
+    "url": "https://www.sec.gov/edgar/searchedgar/companysearch",
     "category": "corporate",
-    "jurisdiction": "United States",
-    "description": "Business entity and registration lookup database.",
+    "jurisdiction": "United States (Federal)",
+    "description": "Official SEC search for company filings, registration statements, and periodic reports.",
     "status": "active"
   },
   {
-    "id": "us-county-property-records",
-    "name": "County Property Records Portal",
-    "url": "https://examplecounty.gov/property",
+    "id": "uk-companies-house-find-and-update",
+    "name": "Companies House - Find and Update Company Information",
+    "url": "https://find-and-update.company-information.service.gov.uk/",
+    "category": "corporate",
+    "jurisdiction": "United Kingdom",
+    "description": "Official UK register for incorporated entities, officers, filing history, and charges.",
+    "status": "active"
+  },
+  {
+    "id": "ca-corporations-canada-search",
+    "name": "Corporations Canada Federal Corporation Search",
+    "url": "https://ised-isde.canada.ca/cc/lgcy/fdrlCrpSrch.html",
+    "category": "corporate",
+    "jurisdiction": "Canada (Federal)",
+    "description": "Federal corporation search for corporate profiles and filing status in Canada.",
+    "status": "active"
+  },
+  {
+    "id": "au-asic-organisations-register",
+    "name": "ASIC Organisations and Business Names Search",
+    "url": "https://connectonline.asic.gov.au/RegistrySearch/faces/landing/SearchRegisters.jspx",
+    "category": "corporate",
+    "jurisdiction": "Australia",
+    "description": "Official ASIC entry point for searching companies, organisations, and business names.",
+    "status": "active"
+  },
+  {
+    "id": "us-nydos-corporation-business-entity-search",
+    "name": "New York Department of State Corporation & Business Entity Database",
+    "url": "https://apps.dos.ny.gov/publicInquiry/",
+    "category": "corporate",
+    "jurisdiction": "United States - New York",
+    "description": "State-level business entity lookup for New York corporations and other registered entities.",
+    "status": "active"
+  },
+  {
+    "id": "us-blm-general-land-office-records",
+    "name": "Bureau of Land Management General Land Office Records",
+    "url": "https://glorecords.blm.gov/",
     "category": "property",
-    "jurisdiction": "United States",
-    "description": "Property ownership, parcel, and land records portal.",
+    "jurisdiction": "United States (Federal)",
+    "description": "Federal land patent records and survey documents maintained by the U.S. BLM.",
     "status": "active"
   },
   {
-    "id": "us-court-docket-search",
-    "name": "State Court Docket Search",
-    "url": "https://examplecourts.gov/dockets",
+    "id": "us-nyc-acris-property-records",
+    "name": "NYC ACRIS Property Records",
+    "url": "https://a836-acris.nyc.gov/CP/",
+    "category": "property",
+    "jurisdiction": "United States - New York City",
+    "description": "City Register document records for Manhattan, Bronx, Brooklyn, and Queens.",
+    "status": "active"
+  },
+  {
+    "id": "uk-hm-land-registry-search-property-information",
+    "name": "HM Land Registry - Search for Property Information",
+    "url": "https://www.gov.uk/search-property-information-land-registry",
+    "category": "property",
+    "jurisdiction": "United Kingdom - England and Wales",
+    "description": "Official UK government service for title register and title plan information.",
+    "status": "active"
+  },
+  {
+    "id": "us-miami-dade-property-appraiser-search",
+    "name": "Miami-Dade County Property Appraiser Search",
+    "url": "https://www.miamidade.gov/pa/property_search.asp",
+    "category": "property",
+    "jurisdiction": "United States - Florida - Miami-Dade County",
+    "description": "County property parcel and ownership valuation search maintained by the Property Appraiser.",
+    "status": "active"
+  },
+  {
+    "id": "us-pacer-case-locator",
+    "name": "U.S. PACER Case Locator",
+    "url": "https://pcl.uscourts.gov/pcl/index.jsf",
     "category": "court",
-    "jurisdiction": "United States",
-    "description": "Court docket lookup and case metadata search.",
+    "jurisdiction": "United States (Federal)",
+    "description": "National index for U.S. federal court case and party records through PACER.",
+    "status": "active"
+  },
+  {
+    "id": "us-supreme-court-docket-search",
+    "name": "Supreme Court of the United States Docket Search",
+    "url": "https://www.supremecourt.gov/docket/docket.aspx",
+    "category": "court",
+    "jurisdiction": "United States (Federal)",
+    "description": "Official Supreme Court docket search for case filings and procedural status.",
+    "status": "active"
+  },
+  {
+    "id": "ca-federal-court-court-files",
+    "name": "Federal Court of Canada Court Files",
+    "url": "https://www.fct-cf.gc.ca/en/court-files-and-decisions/court-files",
+    "category": "court",
+    "jurisdiction": "Canada (Federal)",
+    "description": "Federal Court of Canada portal for locating and requesting court file records.",
+    "status": "active"
+  },
+  {
+    "id": "uk-the-national-archives-find-case-law",
+    "name": "The National Archives - Find Case Law",
+    "url": "https://caselaw.nationalarchives.gov.uk/",
+    "category": "court",
+    "jurisdiction": "United Kingdom",
+    "description": "Official UK case law service publishing judgments and tribunal decisions.",
+    "status": "active"
+  },
+  {
+    "id": "us-cms-npi-registry",
+    "name": "NPI Registry",
+    "url": "https://npiregistry.cms.hhs.gov/search",
+    "category": "licensing",
+    "jurisdiction": "United States (Federal)",
+    "description": "Official CMS registry for National Provider Identifier records for healthcare providers.",
+    "status": "active"
+  },
+  {
+    "id": "us-faa-airmen-inquiry",
+    "name": "FAA Airmen Inquiry",
+    "url": "https://amsrvs.registry.faa.gov/airmeninquiry/",
+    "category": "licensing",
+    "jurisdiction": "United States (Federal)",
+    "description": "FAA verification portal for U.S. airmen certificate and rating records.",
+    "status": "active"
+  },
+  {
+    "id": "uk-fca-financial-services-register",
+    "name": "Financial Conduct Authority Financial Services Register",
+    "url": "https://register.fca.org.uk/s/",
+    "category": "licensing",
+    "jurisdiction": "United Kingdom",
+    "description": "Official FCA register of authorized firms, approved persons, and regulated activities.",
+    "status": "active"
+  },
+  {
+    "id": "us-congress-gov-legislation",
+    "name": "Congress.gov",
+    "url": "https://www.congress.gov/",
+    "category": "government",
+    "jurisdiction": "United States (Federal)",
+    "description": "Official federal legislative database for bills, resolutions, and congressional records.",
+    "status": "active"
+  },
+  {
+    "id": "eu-eur-lex",
+    "name": "EUR-Lex",
+    "url": "https://eur-lex.europa.eu/homepage.html",
+    "category": "government",
+    "jurisdiction": "European Union",
+    "description": "Official EU law portal for treaties, directives, regulations, and case law references.",
+    "status": "active"
+  },
+  {
+    "id": "us-cfpb-consumer-complaint-database",
+    "name": "CFPB Consumer Complaint Database",
+    "url": "https://www.consumerfinance.gov/data-research/consumer-complaints/search/",
+    "category": "public-database",
+    "jurisdiction": "United States (Federal)",
+    "description": "Public complaint records concerning consumer financial products and services.",
+    "status": "active"
+  },
+  {
+    "id": "us-census-data",
+    "name": "data.census.gov",
+    "url": "https://data.census.gov/",
+    "category": "public-database",
+    "jurisdiction": "United States (Federal)",
+    "description": "U.S. Census Bureau platform for demographic, economic, and housing data products.",
+    "status": "active"
+  },
+  {
+    "id": "world-bank-open-data",
+    "name": "World Bank Open Data",
+    "url": "https://data.worldbank.org/",
+    "category": "public-database",
+    "jurisdiction": "International",
+    "description": "Global development indicators and datasets published by the World Bank.",
+    "status": "active"
+  },
+  {
+    "id": "interpol-red-notices",
+    "name": "INTERPOL Red Notices",
+    "url": "https://www.interpol.int/How-we-work/Notices/View-Red-Notices",
+    "category": "international",
+    "jurisdiction": "International",
+    "description": "INTERPOL publication portal for publicly available Red Notice records.",
+    "status": "active"
+  },
+  {
+    "id": "eu-e-justice-business-registers-search",
+    "name": "European e-Justice Portal Business Registers Search",
+    "url": "https://e-justice.europa.eu/489/EN/business_registers_search_for_a_company_in_the_eu",
+    "category": "international",
+    "jurisdiction": "European Union",
+    "description": "Cross-border entry point to search member state business registers.",
+    "status": "active"
+  },
+  {
+    "id": "un-security-council-consolidated-sanctions-list",
+    "name": "UN Security Council Consolidated Sanctions List",
+    "url": "https://main.un.org/securitycouncil/en/sanctions/un-sc-consolidated-list",
+    "category": "international",
+    "jurisdiction": "International",
+    "description": "United Nations consolidated sanctions list maintained by the Security Council.",
     "status": "active"
   }
 ]

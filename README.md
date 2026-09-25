@@ -28,12 +28,12 @@ The OSINT Grid brings public-records links into one organized catalog so researc
 
 ```json
 {
-  "id": "us-business-search",
-  "name": "U.S. Secretary of State Business Search",
-  "url": "https://example.gov/business-search",
+  "id": "us-sec-edgar-company-filings",
+  "name": "SEC EDGAR Company Filings Search",
+  "url": "https://www.sec.gov/edgar/searchedgar/companysearch",
   "category": "corporate",
-  "jurisdiction": "United States",
-  "description": "Business entity and registration lookup database.",
+  "jurisdiction": "United States (Federal)",
+  "description": "Official SEC search for company filings, registration statements, and periodic reports.",
   "status": "active"
 }
 ```
