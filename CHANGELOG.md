@@ -8,7 +8,7 @@
 - Source catalog and JSON schema
 - Data contribution documentation
 - Project documentation index
-- LLM-readable project summaries
+- Machine-readable project summaries
 - Contribution guide
 - Security and community guidance
 - Bug report and feature request templates

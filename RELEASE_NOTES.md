@@ -15,7 +15,7 @@ The first public release of The OSINT Grid establishes the repository as a maint
 - Repository contribution guidelines
 - Issue templates for bugs and feature requests
 - Pull request template
-- LLM-readable project documentation in `llms.txt` and `llms-full.txt`
+- Machine-readable project documentation
 - Integration notes for The OSINT Vault Toolkit
 
 ## Source record fields
