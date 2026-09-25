@@ -21,10 +21,10 @@ jobs:
 
       - name: Run Prettier on JSON, YAML, and Markdown
         run: |
-          prettier --write "**/*.json"
-          prettier --write "**/*.yml"
-          prettier --write "**/*.yaml"
-          prettier --write "**/*.md"
+          prettier --write --no-error-on-unmatched-pattern "**/*.json"
+          prettier --write --no-error-on-unmatched-pattern "**/*.yml"
+          prettier --write --no-error-on-unmatched-pattern "**/*.yaml"
+          prettier --write --no-error-on-unmatched-pattern "**/*.md"
 
       - name: Commit formatted files
         run: |
