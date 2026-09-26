@@ -23,7 +23,7 @@ jobs:
         run: |
           prettier --write "**/*.json"
           prettier --write "**/*.yml"
-          prettier --write "**/*.yaml"
+          prettier --write --no-error-on-unmatched-pattern "**/*.yaml"
           prettier --write "**/*.md"
 
       - name: Commit formatted files
